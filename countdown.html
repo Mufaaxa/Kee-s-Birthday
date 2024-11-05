@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown to Kee's Birthday</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="countdown-page">
+    <h2>Countdown to Kee's Special Day!</h2>
+    <div id="countdown-only-timer"></div>
+  </div>
+
+  <script>
+    const countdownDate = new Date("November 16, 2024 00:00:00").getTime();
+    const countdownTimer = document.getElementById("countdown-only-timer");
+
+    const countdownInterval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownTimer.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+      if (distance < 0) {
+        clearInterval(countdownInterval);
+        window.location.href = "index.html"; // Arahkan ke halaman utama
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

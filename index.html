@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Kee!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Foto Kee -->
+  <div class="photo-container">
+    <img src="photo3.jpg" alt="Keenan's Birthday Photo" id="birthday-photo">
+    <img src="photo2.jpg" alt="Keenan's Birthday Photo" id="birthday-photo">
+  </div>
+
+  <!-- Countdown to Birthday -->
+  <div class="countdown">
+    <h2>Countdown to Your Special Day, Kee!</h2>
+    <div id="countdown-timer"></div>
+  </div>
+
+  <!-- Welcome Message with Typing Effect -->
+  <div class="welcome-message">
+    <h1 id="typing-text">Happy Birthday, Keenan!</h1>
+  </div>
+
+  <!-- Interactive Secret Message -->
+  <div class="secret-message">
+    <button class="modern-button" onclick="showSecretMessage()">Click here for a Secret Message!</button>
+    <div id="secret-message-box" class="hidden">Everything about you is worthy of love, whether by me or by
+      any other soul.You deserve laughter, joy, and a light heart.</div>
+  </div>
+
+  <!-- Virtual Gift Box -->
+  <div class="gift-box">
+    <button class="modern-button" onclick="openGift()">Open Your Virtual Gift 🎁</button>
+    <div id="gift-message-box"></div>
+  </div>
+
+   <!-- Flower Animation -->
+   <div id="flower-animation"></div>
+   
+  <!-- Show Random Quote -->
+  <div class="quote-section">
+    <button class="modern-button" onclick="showRandomQuote()">Show a Birthday Quote</button>
+    <p id="random-quote"></p>
+  </div>
+
+  <!-- Dark Mode Toggle -->
+  <button class="modern-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+  <!-- Confetti Animation -->
+  <div id="confetti-container"></div>
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="JVKE - her (official lyric video).mp3" type="audio/mp3">
+  </audio>
+  <button class="modern-button" onclick="toggleMusic()">Play/Pause Music</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
